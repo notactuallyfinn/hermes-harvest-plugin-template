@@ -20,17 +20,23 @@ jobs:
           TITLE: Add plugin to marketplace
           BODY: |
             Thank you for building a plugin for `hermes`. We encourage you to share it with the community!
-
             The [HERMES plugin marketplace](https://hermes.software-metadata.pub/#plugins) is a curated list of plugins on our website that allows you to share plugins that you developed, and others to find them.
-
             You can send us the required information to add your plugin to the marketplace, by [creating an issue in the `hermes` repository](https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml).
   delete_workflow:
     name: Delete this run-once workflow
     runs-on: ubuntu-latest
     permissions:
-      actions: write
+      contents: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Delete this run-once workflow
-        run: gh workflow --repo ${{ github.repository }} disable "Publish plugin to the HERMES Marketplace"
+        run: rm ./.github/workflows/publish_plugin.yml
+      - name: Commit und push the deletion
+        run: |
+          git config --global user.name 'automated[bot]'
+          git config --global user.email ''
+          git commit -am "Automated deletion of workflow after finishing issue creation"
+          git push
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
