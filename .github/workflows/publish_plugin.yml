@@ -19,12 +19,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TITLE: Add plugin to marketplace
           BODY: |
-            Thanks for creating a HERMES harvest plugin!
+            Thank you for building a plugin for `hermes`. We encourage you to share it with the community!
 
-            To make HERMES a more user friendly project you can submit your plugin to the [HERMES Marketplace](https://hermes.software-metadata.pub/en/latest/#plugins).
-            This way other users can use your plugin too and the set of harvestable metadata sources grows for all of us!
+            The [HERMES plugin marketplace](https://hermes.software-metadata.pub/#plugins) is a curated list of plugins on our website that allows you to share plugins that you developed, and others to find them.
 
-            In order for your plugin to be published on the marketplace create an issue using [this template]( https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml).
+            You can send us the required information to add your plugin to the marketplace, by [creating an issue in the `hermes` repository](https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml).
   delete_workflow:
     name: Delete this run-once workflow
     runs-on: ubuntu-latest
