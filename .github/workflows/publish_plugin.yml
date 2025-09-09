@@ -1,4 +1,4 @@
-name: Publish plugin to the HERMES Marketplace
+name: Create issue to publish plugin to marketplace
 
 on:
   push:
