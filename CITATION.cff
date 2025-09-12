@@ -4,7 +4,7 @@ message: >-
   If you use this software, please cite it using the
   metadata from this file.
 version: 0.1.0
-abstract: "Harvest plugin for your_source for hermes. Not stable yet."  # replace placeholder "your_source"
+abstract: "Harvest plugin for your_source for hermes"  # replace placeholder "your_source"
 type: software
 authors: # replace with your information
   - given-names: You
